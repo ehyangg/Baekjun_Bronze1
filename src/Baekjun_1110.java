@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//다른 사람 풀이를 보니 사칙연산으로 공식화 시켜서 푸는게 대부분이었다.
 public class Baekjun_1110 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -33,3 +33,28 @@ public class Baekjun_1110 {
 		sc.close();
 	}
 }
+
+//import java.util.Scanner;
+//
+//public class Main {
+// 
+//	public static void main(String[] args) {
+//		Scanner in = new Scanner(System.in);
+// 
+//		int N = in.nextInt();
+//		in.close();
+//        
+//		int cnt = 0;
+//		int copy = N;
+//        
+//		while (true) {
+//			N = ((N % 10) * 10) + (((N / 10) + (N % 10)) % 10);
+//			cnt++;
+// 
+//			if (copy == N) {
+//				break;
+//			}
+//		}
+//		System.out.println(cnt);
+//	}
+//}
