@@ -3,25 +3,30 @@ import java.util.Scanner;
 public class Baekjun_1110 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		String[] file = new String[n];
-		for (int i = 0; i < n; i++) {
-			file[i] = sc.next();
+		String n = sc.next();
+		String p = n;
+		final int c = 48;	
+		if(n.length()==1) {
+			n += 0;
 		}
-		boolean diff = false;
-		for (int i = 0; i < file[0].length(); i++) {
-			diff = false;
-			for (int j = 0; j < n - 1; j++) {
-				if (file[j].charAt(i) != file[j + 1].charAt(i)) {
-					diff = true;
-					break;
-				}
-			}
-			if (diff) 
-				System.out.print("?");
-			else 
-				System.out.print(file[0].charAt(i));
-		}	
+		
+		int num1 = n.charAt(0)-c;
+		int num2 = n.charAt(1)-c;
+		int sum = num1 + num2;
+		String a = Integer.toString(sum);
+		String s = Integer.toString(num2) + a.charAt(a.length()-1);
+		int i=1;
+		boolean plz = true;
+		while (plz) {
+			int num3 = s.charAt(0)-c;
+			int num4 = s.charAt(1)-c;
+			sum = num3 + num4;
+			a = Integer.toString(sum);
+			s = Integer.toString(num4) + a.charAt(a.length()-1);
+			i+=1;
+			if(s == p) plz=false;
+		}
+		System.out.println(i);
 		sc.close();
 	}
 }
