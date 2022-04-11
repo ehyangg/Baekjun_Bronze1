@@ -5,7 +5,7 @@ public class Baekjun_1546 {
 		Scanner sc = new Scanner(System.in);
 		int tests = sc.nextInt();
 		int a = 0;
-		int[] score = new int[tests];
+		double[] score = new double[tests];
 		double sum = 0;
 		while (a < tests) {
 			score[a] = sc.nextInt();
